@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/changelog.css">
+    <link rel="stylesheet" type="text/css" href="/style/fonts.css">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.ico">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        var clicked = false;
+        function toggle(){
+            var card = document.getElementById("card");
+            var cross = document.getElementById("cross");
+            var menu = document.getElementById("menu");
+            if (clicked == false){
+                card.style.height = "100vh";
+                clicked = true;
+                cross.style.display = "block"
+                menu.style.display = "none"
+            }
+            else{
+                card.style.height = "0px";
+                clicked = false;
+                cross.style.display = "none"
+                menu.style.display = "block"
+            }
+        }
+    </script>
+    <title>Nebula - Changelog</title>
+</head>
+<body>
+    <a href="/home.html">
+        <img id="logo" src="/assets/logo.png">
+    </a>
+    <!-- <img id="logo" src="/assets/logo.png"> -->
+    <div class="card" id="card">
+        <ul class="navigation">
+            <li><a href="/home.html"><ion-icon name="home"></ion-icon> Home</a></li>
+            <li><a href="/about.html"><ion-icon name="information-circle"></ion-icon> About</a></li>
+            <li><a href="https://discord.com/api/oauth2/authorize?client_id=953533453100527626&permissions=1247621410038&scope=bot"><ion-icon name="add-circle"></ion-icon> Invite</a></li>
+            <li><a href="https://discord.gg/CxtY6rTnr4"><ion-icon name="help"></ion-icon> Support Server</a></li>
+            <li><a href="/commands.html"><ion-icon name="list"></ion-icon> Commands</a></li>
+            <li><a href="/suggest.html"><ion-icon name="chatbubble"></ion-icon> Suggest</a></li>
+            <li><a href="/changelog.html"><ion-icon name="document"></ion-icon> Changelog</a></li>
+            <li><a href="/music.html"><ion-icon name="musical-notes"></ion-icon> Music</a></li>
+            <li><a href="https://nebula-dashboard.onrender.com"><ion-icon name="stats-chart"></ion-icon> Dashboard</a></li>
+        </ul>
+        <div class="toggle" id="toggle">
+            <button onclick="toggle()"><ion-icon name="menu-outline" id="menu"></ion-icon><ion-icon name="close-outline" style="display:none" id="cross"></ion-icon></button>
+        </div>
+    </div>
+    <!-- <div id="title">
+        <h1>About</h1>
+    </div> -->
+    <section id="titlesection">
+        <div class="main">
+            <h1>Changelog</h1>
+            <hr id="titleline">
+            <h2>Version <code>4.2</code></h2>
+            <a id="next" class="title" href="#index"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+    <section id="index">
+        <div class="main">
+            <h1>Index</h1>
+            <p>
+            • <a id="link" href="#new-commands">New Commands</a><br>
+            • <a id="link" href="#extra-adds">Extra Adds</a><br>
+            • <a id="link" href="#bug-fixes">Bug Fixes</a><br>
+            </p>
+            <a id="next" href="#new-commands"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+            <a id="previous" href="#titlesection" class="enabled"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+    <section id="new-commands">
+        <div class="main">
+            <h1>New&nbsp;Commands</h1>
+            <p>
+            <b>/start</b> - Start a NebCoins account<br>
+            <b>/balance</b> - View your NebCoins balance<br>
+            <b>/farm</b> - View your farm<br>
+            <b>/plant</b> - Plant or view list of plants<br>
+            <b>/inventory</b> - View your inventory<br>
+            <b>/sell</b> - Sell an item from your inventory<br>
+            <b>/market</b> - View today's market<br>
+            <b>/work</b> - Work for NebCoins<br>
+            <b>/leaderboard</b> - View the leaderboard<br>
+            <b>/level</b> - View your NebCoins level<br>
+            <b>/transfer</b> - Transfer NebCoins<br>
+            <b>/beg</b> - Beg for NebCoins<br>
+            <b>/journey</b> - Go on a journey to find pets<br>
+            <b>/mypets</b> - View your pets<br>
+            <b>/pets</b> - View a list of pets
+            </p>
+            <a id="next" href="#extra-adds"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+            <a id="previous" href="#index" class="enabled"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+    <section id="extra-adds">
+        <div class="main">
+            <h1>Extra&nbsp;Adds</h1>
+            <p>
+                Added a <b>Bug Report System</b><br>
+                • Every time an error occurs in the code, it informs the user "an error occured" and asks the user if they want to report it.<br>
+                • If reported, the error will directly go to the developer and will be fixed as soon as possible
+            </p>
+            <a id="next" href="#bug-fixes"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+            <a id="previous" href="#new-commands" class="enabled"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+    <section id="bug-fixes">
+        <div class="main">
+            <h1>Bug&nbsp;Fixes</h1>
+            <p>
+                Fixed <b>Stats update</b> on Top.gg and discordbotlist.com
+            </p>
+            <a id="previous" href="#extra-adds" class="bug-fixes"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+</body>
+</html>

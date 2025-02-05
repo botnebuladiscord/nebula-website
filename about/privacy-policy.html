@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/privacy-policy.css">
+    <link rel="stylesheet" type="text/css" href="/style/fonts.css">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.ico">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        var clicked = false;
+        function toggle(){
+            var card = document.getElementById("card");
+            var cross = document.getElementById("cross");
+            var menu = document.getElementById("menu");
+            if (clicked == false){
+                card.style.height = "100vh";
+                clicked = true;
+                cross.style.display = "block"
+                menu.style.display = "none"
+            }
+            else{
+                card.style.height = "0px";
+                clicked = false;
+                cross.style.display = "none"
+                menu.style.display = "block"
+            }
+        }
+    </script>
+    <title>Nebula - Privacy Policy</title>
+</head>
+<body>
+    <a href="/home.html">
+        <img id="logo" src="/assets/logo.png">
+    </a>
+    <!-- <img id="logo" src="/assets/logo.png"> -->
+    <div class="card" id="card">
+        <ul class="navigation">
+            <li><a href="/home.html"><ion-icon name="home"></ion-icon> Home</a></li>
+            <li><a href="/about.html"><ion-icon name="information-circle"></ion-icon> About</a></li>
+            <li><a href="https://discord.com/api/oauth2/authorize?client_id=953533453100527626&permissions=1247621410038&scope=bot"><ion-icon name="add-circle"></ion-icon> Invite</a></li>
+            <li><a href="https://discord.gg/CxtY6rTnr4"><ion-icon name="help"></ion-icon> Support Server</a></li>
+            <li><a href="/commands.html"><ion-icon name="list"></ion-icon> Commands</a></li>
+            <li><a href="/suggest.html"><ion-icon name="chatbubble"></ion-icon> Suggest</a></li>
+            <li><a href="/changelog.html"><ion-icon name="document"></ion-icon> Changelog</a></li>
+            <li><a href="/music.html"><ion-icon name="musical-notes"></ion-icon> Music</a></li>
+            <li><a href="https://nebula-dashboard.onrender.com"><ion-icon name="stats-chart"></ion-icon> Dashboard</a></li>
+        </ul>
+        <div class="toggle" id="toggle">
+            <button onclick="toggle()"><ion-icon name="menu-outline" id="menu"></ion-icon><ion-icon name="close-outline" style="display:none" id="cross"></ion-icon></button>
+        </div>
+    </div>
+    <div id="title">
+        <h1>Privacy Policy</h1>
+    </div>
+    <div id="subtitle">
+        <h2>
+        Nebula abides to the data privacy policy as recommended by discord.
+        </h2>
+        <h1>Data Collection</h1>
+        <p>
+            Nebula collects information such as User IDS, Message IDS, Channel IDS. This data is not used for any other purposes except the running of the bot. You can find information on why Nebula uses this data in Section 2. To request a deletion of data, please look at Section 4.<br>
+            <b>Data is deleted after 30 days in case of inactivity</b>
+        </p>
+        <br><hr><br>
+        <h1>Reason for data collection</h1>
+        <p>
+            <ol>
+                <li><b>User IDS:</b> Nebula stores user IDS for storing 
+                    information such as your NebCoins account.</li>
+                <li><b>Message IDS:</b> Nebula stores message ids for further interactions such as 
+                    using the Message ID to run a poll created before (poll data is deleted after poll ends).</li>
+                <li><b>Channel IDS:</b> Nebula stores channel ids for going back to a message 
+                    (Discord.py needs a channel to access a message in it) such as in polls.</li>
+                <!-- <li><b>Playlist Songs:</b> Nebula stores your songs to play them when you want to play
+                your playlist.</li> -->
+            </ol>
+        </p>
+        <br><hr><br>
+        <h1>Duration of data storage</h1>
+        <p>
+            <ol>
+                <li><b>NebCoins:</b> NebCoins data is deleted after 30 days if you are inactive or it is deleted if you request a data 
+                    deletion.</li>
+                <li><b>Poll Data:</b> Poll data is erased after the poll ends, or if 
+                    you request deletion of data</li>
+            </ol>
+        </p>
+        <br><hr><br>
+        <h1>Deletion of data</h1>
+        <p>
+            To request a complete data deletion for yourself you can either send an <b>Email at - bot.nebula.discord@gmail.com</b> or <b>Send a modmail in the support server<br>
+            (<a href="https://discord.gg/CxtY6rTnr4" target="_blank">https://discord.gg/CxtY6rTnr4</a>)</b><br><br>
+            <b>Email Format:-</b><br>
+            Subject: Deletion of data<br><br>Discord User ID: YOUR USER ID HERE(Example: 861132873511731202)<br>
+            Brief Reason
+        </p>
+        <br><hr><br>
+    </div>
+</body>
+</html>

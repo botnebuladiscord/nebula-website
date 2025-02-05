@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/about.css">
+    <link rel="stylesheet" type="text/css" href="/style/fonts.css">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.ico">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        var clicked = false;
+        function toggle(){
+            var card = document.getElementById("card");
+            var cross = document.getElementById("cross");
+            var menu = document.getElementById("menu");
+            if (clicked == false){
+                card.style.height = "100vh";
+                clicked = true;
+                cross.style.display = "block"
+                menu.style.display = "none"
+            }
+            else{
+                card.style.height = "0px";
+                clicked = false;
+                cross.style.display = "none"
+                menu.style.display = "block"
+            }
+        }
+    </script>
+    <title>Nebula - About</title>
+</head>
+<body>
+    <a href="/home.html">
+        <img id="logo" src="/assets/logo.png">
+    </a>
+    <!-- <img id="logo" src="/assets/logo.png"> -->
+    <div class="card" id="card">
+        <ul class="navigation">
+            <li><a href="/home.html"><ion-icon name="home"></ion-icon> Home</a></li>
+            <li><a href="/about.html"><ion-icon name="information-circle"></ion-icon> About</a></li>
+            <li><a href="https://discord.com/api/oauth2/authorize?client_id=953533453100527626&permissions=1247621410038&scope=bot"><ion-icon name="add-circle"></ion-icon> Invite</a></li>
+            <li><a href="https://discord.gg/CxtY6rTnr4"><ion-icon name="help"></ion-icon> Support Server</a></li>
+            <li><a href="/commands.html"><ion-icon name="list"></ion-icon> Commands</a></li>
+            <li><a href="/suggest.html"><ion-icon name="chatbubble"></ion-icon> Suggest</a></li>
+            <li><a href="/changelog.html"><ion-icon name="document"></ion-icon> Changelog</a></li>
+            <li><a href="/music.html"><ion-icon name="musical-notes"></ion-icon> Music</a></li>
+            <li><a href="https://nebula-dashboard.onrender.com"><ion-icon name="stats-chart"></ion-icon> Dashboard</a></li>
+        </ul>
+        <div class="toggle" id="toggle">
+            <button onclick="toggle()"><ion-icon name="menu-outline" id="menu"></ion-icon><ion-icon name="close-outline" style="display:none" id="cross"></ion-icon></button>
+        </div>
+    </div>
+    <!-- <div id="title">
+        <h1>About</h1>
+    </div> -->
+    <section id="titlesection">
+        <div class="main">
+            <h1>Nebula</h1>
+            <hr id="titleline">
+            <a id="next" class="title" href="#index"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+    <section id="index">
+        <div class="main">
+            <h1>Index</h1>
+            <p>
+            • <a id="link" href="#overview">Overview</a><br>
+            • <a id="link" href="#important-information">Important Information</a><br>
+            • <a id="link" href="#quick-links">Quick Links</a><br>
+            • <a id="link" href="#uptime">Uptime</a>
+            </p>
+            <a id="next" href="#overview"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+            <a id="previous" href="#titlesection" class="enabled"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+    <section id="overview">
+        <div class="main">
+            <h1>Overview</h1>
+            <p>Nebula is an all in one discord bot developed by isroisthebest.<br><br>
+            It includes:<br>
+            • Math Commands<br>
+            • Moderation Commands<br>
+            • Information Commands<br>
+            • Fun Commands<br>
+            • NebCoins
+            </p>
+            <a id="next" href="#important-information"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+            <a id="previous" href="#index" class="enabled"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+    <section id="important-information">
+        <div class="main">
+            <h1>Important&nbsp;Information</h1>
+            <p>Nebula has a few important articles and documents...<br><br>
+            1. <a id="link" href="/about/tos.html" target="_blank" rel="noopener noreferrer">Terms of service <ion-icon name="open-outline"></ion-icon></a><br>
+            2. <a id="link" href="/about/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy <ion-icon name="open-outline"></ion-icon></a><br>
+            3. <a id="link" href="/changelog.html" target="_blank" rel="noopener noreferrer">Changelog <ion-icon name="open-outline"></ion-icon></a>
+            </p>
+            <a id="next" href="#quick-links"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+            <a id="previous" href="#overview" class="enabled"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+    <section id="quick-links">
+        <div class="main">
+            <h1>Quick&nbsp;Links</h1>
+            <p><a id="link" href="https://discord.com/api/oauth2/authorize?client_id=953533453100527626&permissions=1247621410038&scope=bot" target="_blank" rel="noopener noreferrer">Invite <ion-icon name="open-outline"></ion-icon></a><br>
+                <a id="link" href="https://discord.gg/CxtY6rTnr4" target="_blank" rel="noopener noreferrer">Support Server <ion-icon name="open-outline"></ion-icon></a><br>
+                <a id="link" href="https://www.youtube.com/channel/UC3mXj3Vr3p0l7ARHADtSvVQ" target="_blank" rel="noopener noreferrer">YouTube <ion-icon name="open-outline"></ion-icon></a><br>
+                <a id="link" href="https://top.gg/bot/953533453100527626" target="_blank" rel="noopener noreferrer">Top.gg <ion-icon name="open-outline"></ion-icon></a><br>
+                <a id="link" href="https://discordbotlist.com/bots/nebula-5032" target="_blank" rel="noopener noreferrer">Discordbotlist.com <ion-icon name="open-outline"></ion-icon></a><br>
+            </p>
+            <a id="next" href="#uptime"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+            <a id="previous" href="#important-information" class="enabled"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+    <section id="uptime">
+        <div class="main">
+            <h1>Uptime</h1>
+            <iframe src="https://nebula-support.koyeb.app/uptime" title="Uptime">Loading...</iframe>
+            <a id="previous" href="#quick-links" class="uptime"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>
+        </div>
+    </section>
+</body>
+</html>

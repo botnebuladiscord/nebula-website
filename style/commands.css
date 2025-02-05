@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: AnonymousPro;
+}
+
+body{
+    background-image: url('/assets/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#logo{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    max-height: 15vh;
+    /* max-width: 100vw; */
+}
+
+#title{
+    position: inherit;
+    top: 5%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0%);
+    font-size: 2vw;
+}
+
+#subtitle{
+    position: inherit;
+    top: 20%;
+    left: 0%;
+    text-align: center;
+    transform: translate(0%, 0%);
+    width: 100%;
+}
+
+#subtitle h1{
+    font-weight: 500;
+    font-size: 3vw;
+}
+
+code{
+    background-color: #17181a;
+    font-family: AnonymousPro;
+    border-radius: 1px;
+    padding-top: 0.2vh;
+    padding-bottom: 0.2vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+b{
+    font-weight: 900;
+}
+
+.navigation{
+    position: relative;
+    /* float: right;   */
+    top: 25px; 
+    padding-right: 10px;
+    z-index: 4;
+}
+
+.navigation{
+    padding-top: 10%;
+}
+
+.navigation li{
+    list-style: none;
+    margin: 15px 0;
+    z-index: 2;
+}    
+
+.navigation li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.1em;
+    transition: 0.25s;
+    padding: 10px;
+    padding-right: 0px;
+    width: 100%;
+    z-index: 2;
+}
+
+.navigation li a:hover{
+    color: black;
+    background-color: white;
+    transition: ease-in-out 500ms;
+    padding-right: 0px;
+}
+
+.navigation li a:hover > ion-icon{
+    color: black;
+    transition: ease-in-out 500ms;
+}
+
+.navigation li a ion-icon{
+    padding-right: 10px;
+    font-size: 1.6em;
+    margin-right: 15px;
+}
+
+.navigation li a ion-icon:hover{
+    color: black;
+}
+
+.toggle{
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 40px;
+    /* height: 40px; */
+    /* float: right; */
+}
+
+.card{
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    float: right;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    background-color: #17181a;
+    height: 0vh;
+    z-index: 2;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+button ion-icon:hover{
+    background-color: white;
+    color: black;
+    transition: ease-in-out 500ms;
+}
+
+.toggle ion-icon{
+    color: white;
+    font-size: 3em;
+    z-index: 3;
+}
+
+
+#cmdtext{
+    font-size: 2vw;
+    background-color: #36393e;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    width: 1%;
+    white-space: nowrap;
+}
+
+#content{
+    display: none;
+    width: 100%;
+}
+
+#content p{
+    font-size: 1.5vw;
+    width: 100%;
+    padding-left: 1vw;
+}
+
+#command{
+    height: fit-content;
+    position: relative;
+    top: 10%;
+    width: 70%;
+    left: 0%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    transform: translate(25%, 0%);
+    z-index: 1;
+}
+
+div.command-content{
+    background-color: #17181a;
+    border-radius: 5px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    text-align: left;
+}
+
+#icon{
+    float: right;
+    font-size: 2vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    transform: translate(0%, 0%);
+}
+
+table{
+    width: 100%;
+}
+
+div.command-content:hover{
+    cursor: pointer;
+}
+
+#search{
+    color: white;
+    background-color: #17181a;
+    height: 4vh;
+    width: 30vw;
+    border-radius: 15px;
+    font-size: 1.5vw;
+    border: none;
+    
+}
+
+@media only screen and (max-width: 830px) {
+    #video{
+        height: 196.875px;
+        width: 350px;
+    }
+    #subtitle h1{
+        font-size: 7vw;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    #video{
+        height: 131.25px;
+        width: 233.33px;
+    }
+}
+
+@media only screen and (max-width: 1091px) {
+    #video{
+        height: 131.25px;
+        width: 233.33px;
+    }
+}
+
+/* @media only screen and (max-width: 500px) {
+    #title{
+        font-size: 5vw;
+    }
+} */
+
+@media only screen and (max-width:700px){
+    .navigation li a{
+        font-size: 2.9vw;
+    }
+    #subtitle{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .navigation li a{
+        font-size: 2vw;
+        padding: 1px;
+    }
+    #subtitle{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:920px){
+        .navigation li a{
+            font-size: 2.2vw;
+        }
+        #subtitle{
+            width: 100%;
+        }
+}
+

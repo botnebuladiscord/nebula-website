@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/commands.css">
+    <link rel="stylesheet" type="text/css" href="/style/fonts.css">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.ico">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="/js/commands.js"></script>
+    <script>
+        var clicked = false;
+        function toggle(){
+            var card = document.getElementById("card");
+            var cross = document.getElementById("cross");
+            var menu = document.getElementById("menu");
+            if (clicked == false){
+                card.style.height = "100vh";
+                clicked = true;
+                cross.style.display = "block"
+                menu.style.display = "none"
+            }
+            else{
+                card.style.height = "0px";
+                clicked = false;
+                cross.style.display = "none"
+                menu.style.display = "block"
+            }
+        }
+    </script>
+    <title>Nebula - Commands</title>
+</head>
+<body>
+    <a href="/home.html">
+        <img id="logo" src="/assets/logo.png">
+    </a>
+    <!-- <img id="logo" src="/assets/logo.png"> -->
+    <div class="card" id="card">
+        <ul class="navigation">
+            <li><a href="/home.html"><ion-icon name="home"></ion-icon> Home</a></li>
+            <li><a href="/about.html"><ion-icon name="information-circle"></ion-icon> About</a></li>
+            <li><a href="https://discord.com/api/oauth2/authorize?client_id=953533453100527626&permissions=1247621410038&scope=bot"><ion-icon name="add-circle"></ion-icon> Invite</a></li>
+            <li><a href="https://discord.gg/CxtY6rTnr4"><ion-icon name="help"></ion-icon> Support Server</a></li>
+            <li><a href="/commands.html"><ion-icon name="list"></ion-icon> Commands</a></li>
+            <li><a href="/suggest.html"><ion-icon name="chatbubble"></ion-icon> Suggest</a></li>
+            <li><a href="/changelog.html"><ion-icon name="document"></ion-icon> Changelog</a></li>
+            <li><a href="/music.html"><ion-icon name="musical-notes"></ion-icon> Music</a></li>
+            <li><a href="https://nebula-dashboard.onrender.com"><ion-icon name="stats-chart"></ion-icon> Dashboard</a></li>
+        </ul>
+        <div class="toggle" id="toggle">
+            <button onclick="toggle()"><ion-icon name="menu-outline" id="menu"></ion-icon><ion-icon name="close-outline" style="display:none" id="cross"></ion-icon></button>
+        </div>
+    </div>
+    <div id="title">
+        <h1>Commands</h1>
+    </div>
+    <div id="subtitle">
+        <input type="text" id="search" placeholder="Search for a command"> 
+        <div id="command">
+            <div class="command-content" id="help">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/help <code>[command(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="help" id="content">
+                    <p>Get information on the bot<br><b>Usage:</b> /help [command(OPTIONAL)]<br><b>Example:</b> /help [poll]</p>
+                </div>
+            </div>
+        </div>
+        <div id="command">
+            <div class="command-content" id="add">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/add <code>add [numbers separated by commas]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="add" id="content">
+                    <p>
+                        Adds numbers<br><b>Usage:</b> /add [numbers separated by commas]<br><b>Example:</b> /add [1,2,3]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="subtract">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/subtract <code>[numbers separated by commas]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="subtract" id="content">
+                    <p>
+                        Subtracts numbers<br><b>Usage:</b> /subtract [numbers separated by commas]<br><b>Example:</b> /subtract [4,2,1]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="multiply">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/multiply <code>[numbers separated by commas]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="multiply" id="content">
+                    <p>
+                        Multiply numbers<br><b>Usage:</b> /multiply [numbers separated by commas]<br><b>Example:</b> /multiply [1,2,3]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="divide">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/divide <code>[numbers separated by commas]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="divide" id="content">
+                    <p>
+                        Divide numbers<br><b>Usage:</b> /divide [numbers separated by commas]<br><b>Example:</b> /divide [4,2]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="squareroot">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/squareroot <code>[number]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="squareroot" id="content">
+                    <p>
+                        Find the square root of a number<br><b>Usage:</b> /squareroot [number]<br><b>Example:</b> /squareroot [4]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="cuberoot">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/cuberoot <code>[number]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="cuberoot" id="content">
+                    <p>
+                        Find the cube root of a number<br><b>Usage:</b> /cuberoot [number]<br><b>Example:</b> /cuberoot [8]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="circumference">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/circumference <code>[inputtype(Radius/Diameter)] [number]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="circumference" id="content">
+                    <p>
+                        Find the circumference of a circle<br><b>Usage:</b> /circumference [inputtype(Radius/Diameter)] [number]<br><b>Example:</b> /circumference [Radius] [5]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="speed">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/speed <code>[distance] [time]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="speed" id="content">
+                    <p>
+                        Find the speed of an object<br><b>Usage:</b> /speed [distance] [time]<br><b>Example:</b> /speed [10] [5]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="distance">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/distance <code>[speed] [time]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="distance" id="content">
+                    <p>
+                        Find the distance an object traveled<br><b>Usage:</b> /distance [speed] [time]<br><b>Example:</b> /distance [2] [5]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="time">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/time <code>[distance] [speed]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="time" id="content">
+                    <p>
+                        Find the time an object takes to cover a distance<br><b>Usage:</b> /time [distance] [speed]<br><b>Example:</b> /time [10] [2]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="tictactoe">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/tictactoe <code>[type]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="tictactoe" id="content">
+                    <p>
+                        <b>Single Player</b><br>Play a game with the <b>bot</b><br><b>Multiplayer</b><br>Play a game with <b>your friends</b><br><b>Usage:</b> /tictactoe [type]<br><b>Example:</b> /tictactoe [Single Player]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="wanted">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/wanted <code>[user(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="wanted" id="content">
+                    <p>
+                        Shows the users profile picture on a wanted poster<br><b>Usage:</b> /wanted [user(OPTIONAL)]<br><b>Example:</b> /wanted [@Nebula]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="prison">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/prison <code>[user(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="prison" id="content">
+                    <p>
+                        Shows the users profile picture in a prison<br><b>Usage:</b> /prison [user(OPTIONAL)]<br><b>Example:</b> /prison [@Nebula]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="rockpaperscissors">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/rockpaperscissors</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="rockpaperscissors" id="content">
+                    <p>
+                        Play a game of rock paper scissors<br><b>Usage:</b> /rockpaperscissors<br><b>Example:</b> /rockpaperscissors
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="tweet">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/tweet <code>[body][user(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="tweet" id="content">
+                    <p>
+                        Make a custom twitter post<br><b>Usage:</b> /tweet [body][user(OPTIONAL)]<br><b>Example:</b> /tweet [Hello][@Nebula]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="diceroll">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/diceroll</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="diceroll" id="content">
+                    <p>
+                        Roll a dice<br><b>Usage:</b> /diceroll<br><b>Example:</b> /diceroll
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="quiz">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/quiz <code>[channel(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="quiz" id="content">
+                    <p>
+                        Start a quiz<br><b>Usage:</b> /quiz [channel(OPTIONAL)]<br><b>Example:</b> /quiz [#general]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="quizstats">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/quizstats <code>[user(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="quizstats" id="content">
+                    <p>
+                        View your quiz stats<br><b>Usage:</b> /quizstats [user(OPTIONAL)]<br><b>Example:</b> /quizstats [@Nebula]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="quizleaderboard">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/quizleaderboard</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="quizleaderboard" id="content">
+                    <p>
+                        View the quiz leaderboard<br><b>Usage:</b> /quizleaderboard<br><b>Example:</b> /quizleaderboard
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="connect4">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/connect4 <code>[type]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="connect4" id="content">
+                    <p>
+                        <b>Single Player</b><br>Play a game with the <b>bot</b><br><b>Multiplayer</b><br>Play a game with <b>your friends</b><br><b>Usage:</b> /connect4 [type]<br><b>Example:</b> /connect4 [Single Player]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="kick">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/kick <code>[user] [reason(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="kick" id="content">
+                    <p>
+                        Kick a server member<br><b>Usage:</b> /kick [user] [reason(OPTIONAL)]<br><b>Example:</b> /kick [@Cosmos] [test]
+                        <br>Requires <b>Kick Members</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="ban">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/ban <code>[user] [delete_mesages] [reason(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="ban" id="content">
+                    <p>
+                        Ban a server member<br><b>Usage:</b> /ban [user] [delete_mesages] [reason(OPTIONAL)]<br><b>Example:</b> /ban [@Cosmos] [Previous Hour] [test]
+                        <br>Requires <b>Ban Members</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="slowmode">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/slowmode <code>[seconds]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="slowmode" id="content">
+                    <p>
+                        Set channel slowmode<br><b>Usage:</b> /slowmode [seconds]<br><b>Example:</b> /slowmode [5]
+                        <br>Requires <b>Manage Channel</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="create">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/create <code>[name] [category(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="create" id="content">
+                    <p>
+                        Create a channel<br><b>Usage:</b> /create [name] [category(OPTIONAL)]<br><b>Example:</b> /create [nebula-updates] [nebula info]
+                        <br>Requires <b>Manage Channel</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="delete">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/delete <code>[channel]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="delete" id="content">
+                    <p>
+                        Delete a channel<br><b>Usage:</b> /delete [channel]<br><b>Example:</b> /delete [#chat]
+                        <br>Requires <b>Manage Channel</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="poll">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/poll <code>[channel] [question] [time] [emojis]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="poll" id="content">
+                    <p>
+                        Create a poll<br><b>Usage:</b> /poll [channel] [question] [time] [emojis]<br><b>Example:</b> /poll [#chat] [Does pineapple belong on pizza?] [2h] [✅ ❌]
+                        <br>Requires the user to be able to <b>send messages in the specific channel</b>
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="announce">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/announce <code>[channel] [title] [message] [embedcolor(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="announce" id="content">
+                    <p>
+                        Create an announcement<br><b>Usage:</b> /announce [channel] [title] [message] [embedcolor(OPTIONAL)]<br><b>Example:</b> /announce [#chat] [Slash Commands] [Nebula now has slash commands] [#FFFFFF]
+                        <br>Requires the user to be able to <b>send messages in the specific channel</b>
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="lock">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/lock <code>[channel] [lock_for] [reason(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="lock" id="content">
+                    <p>
+                        Lock a channel<br><b>Usage:</b> /lock [channel] [lock_for] [reason(OPTIONAL)]<br><b>Example:</b> /lock [#chat] [@everyone] [Test]
+                        <br>Requires <b>Manage Channel</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="unlock">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/unlock <code>[channel] [unlock_for] [reason(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="unlock" id="content">
+                    <p>
+                        Unlock a channel<br><b>Usage:</b> /unlock [channel] [unlock_for] [reason(OPTIONAL)]<br><b>Example:</b> /unlock [#chat] [@everyone] [Test]
+                        <br>Requires <b>Manage Channel</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="unban">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/unban <code>[userid] [reason(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="unban" id="content">
+                    <p>
+                        Unban a server member<br><b>Usage:</b> /unban [userid] [reason(OPTIONAL)]<br><b>Example:</b> /unban [953533453100527626] [test]
+                        <br>Requires <b>Ban Members</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="giveaway">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/giveaway <code>[channel] [prize] [time]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="giveaway" id="content">
+                    <p>
+                        Create a giveaway<br><b>Usage:</b> /giveaway [channel] [prize] [time]<br><b>Example:</b> /giveaway [#chat] [Nitro] [2h]
+                        <br>Requires the user to be able to <b>send messages in the specific channel</b>
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="tempban">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/tempban <code>[user] [delete_mesages] [time] [reason(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="tempban" id="content">
+                    <p>
+                        Temporary Ban a server member<br><b>Usage:</b> /tempban [user] [delete_mesages] [time] [reason(OPTIONAL)]<br><b>Example:</b> /tempban [@Cosmos] [Previous Hour] [2h] [test]
+                        <br>Requires <b>Ban Members</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="warn">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/warn <code>[user] [reason]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="warn" id="content">
+                    <p>
+                        Warn a user<br><b>Usage:</b> /warn [user] [reason]<br><b>Example:</b> /warn [@Cosmos] [test]
+                        <br>Requires <b>Manage Messages</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="warnings">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/warnings <code>[user(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="warnings" id="content">
+                    <p>
+                        View warnings for a user<br><b>Usage:</b> /warnings [user(OPTIONAL)]<br><b>Example:</b> /warnings [@Cosmos]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="delwarn">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/delwarn <code>[warnid]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="delwarn" id="content">
+                    <p>
+                        Delete a warning<br><b>Usage:</b> /delwarn [warnid]<br><b>Example:</b> /delwarn [b54ee6e9d06003cm8118935947167662101]
+                        <br>Requires <b>Manage Messages</b> Permission
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="userinfo">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/userinfo <code>[user]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="userinfo" id="content">
+                    <p>
+                        View information on a user<br><b>Usage:</b> /userinfo [user]<br><b>Example:</b> /userinfo [@Cosmos]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="serverinfo">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/serverinfo</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="serverinfo" id="content">
+                    <p>
+                        View information on a server<br><b>Usage:</b> /serverinfo<br><b>Example:</b> /serverinfo
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="fact">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/fact</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="fact" id="content">
+                    <p>
+                        Get a random fact<br><b>Usage:</b> /fact<br><b>Example:</b> /fact
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="question">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/question</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="question" id="content">
+                    <p>
+                        Get a random question<br><b>Usage:</b> /question<br><b>Example:</b> /question
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="changelog">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/changelog</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="changelog" id="content">
+                    <p>
+                        View the changelog<br><b>Usage:</b> /changelog<br><b>Example:</b> /changelog
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="invite">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/invite</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="invite" id="content">
+                    <p>
+                        Get invite information about nebula<br><b>Usage:</b> /invite<br><b>Example:</b> /invite
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="suggest">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/suggest</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="suggest" id="content">
+                    <p>
+                        Suggest Features<br><b>Usage:</b> /suggest<br><b>Example:</b> /suggest
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="stats">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/stats</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="stats" id="content">
+                    <p>
+                        View Nebulas stats<br><b>Usage:</b> /stats<br><b>Example:</b> /stats
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="start">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/start</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="start" id="content">
+                    <p>
+                        Start your NebCoins account<br><b>Usage:</b> /start<br><b>Example:</b> /start
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="balance">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/balance</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="balance" id="content">
+                    <p>
+                        View your NebCoins balance<br><b>Usage:</b> /balance<br><b>Example:</b> /balance
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="farm">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/farm</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="farm" id="content">
+                    <p>
+                        View your NebCoins farm<br><b>Usage:</b> /farm<br><b>Example:</b> /farm
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="plant">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/plant <code>[plant(OPTIONAL)]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="plant" id="content">
+                    <p>
+                        Plant a crop<br><b>Usage:</b> /plant [plant(OPTIONAL)]<br><b>Example:</b> /plant [apple]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="inventory">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/inventory</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="inventory" id="content">
+                    <p>
+                        View your NebCoins inventory<br><b>Usage:</b> /inventory<br><b>Example:</b> /inventory
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="sell">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/sell <code>[id] [quantity]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="sell" id="content">
+                    <p>
+                        Sell an inventory item<br><b>Usage:</b> /sell [id] [quantity]<br><b>Example:</b> /sell [1] [3]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="market">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/market</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="market" id="content">
+                    <p>
+                        View todays market<br><b>Usage:</b> /market<br><b>Example:</b> /market
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="work">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/work</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="work" id="content">
+                    <p>
+                        Work for NebCoins<br><b>Usage:</b> /work<br><b>Example:</b> /work
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="leaderboard">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/leaderboard</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="leaderboard" id="content">
+                    <p>
+                        View the NebCoins leaderboard<br><b>Usage:</b> /leaderboard<br><b>Example:</b> /leaderboard
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="level">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/level</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="level" id="content">
+                    <p>
+                        View your NebCoins level<br><b>Usage:</b> /level<br><b>Example:</b> /level
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="transfer">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/transfer <code>[user] [amount]</code></td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="transfer" id="content">
+                    <p>
+                        Transfer NebCoins to another player<br><b>Usage:</b> /transfer [user] [amount]<br><b>Example:</b> /transfer [@Nebula] [100]
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="beg">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/beg</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="beg" id="content">
+                    <p>
+                        Beg for NebCoins<br><b>Usage:</b> /beg<br><b>Example:</b> /beg
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="journey">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/journey</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="journey" id="content">
+                    <p>
+                        Go on a journey to find pets<br><b>Usage:</b> /journey<br><b>Example:</b> /journey
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="mypets">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/mypets</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="mypets" id="content">
+                    <p>
+                        View a list of your pets<br><b>Usage:</b> /mypets<br><b>Example:</b> /mypets
+                    </p>
+                </div>
+            </div>
+        </div><div id="command">
+            <div class="command-content" id="pets">
+                <table>
+                    <tr>
+                        <td id="cmdtext">/pets</td>
+                        <td id="icon"><ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline" style="display: none;"></ion-icon></td>
+                    </tr>
+                </table>
+                <div class="pets" id="content">
+                    <p>
+                        View a list of available pets<br><b>Usage:</b> /pets<br><b>Example:</b> /pets
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
