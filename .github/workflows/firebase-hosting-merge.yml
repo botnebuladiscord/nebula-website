@@ -20,6 +20,7 @@ jobs:
           cp -r js public/
           cp -r style public/
           cp -r about public/
+          cp -r favicon.ico public/
           mkdir -p public/.well-known
           cp .well-known/* public/.well-known/
 
