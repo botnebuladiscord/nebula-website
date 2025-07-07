@@ -1,22 +1,50 @@
 name: Deploy to Firebase Hosting on merge
+
 on:
   push:
     branches:
       - main
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
+      # ✅ Create a clean deploy folder
+      - name: Prepare deploy folder
+        run: |
+          mkdir public
+          cp *.html public/
+          cp -r assets public/
+          cp -r js public/
+          cp -r style public/
+          mkdir -p public/.well-known
+          cp .well-known/* public/.well-known/
+
+      # ✅ Inject firebase.json specifically for CI
+      - name: Write CI firebase.json
+        run: |
+          echo '{
+            "hosting": {
+              "public": "public",
+              "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+              "cleanUrls": true
+            }
+          }' > firebase.json
+
+      # ✅ Install Firebase CLI
       - name: Install Firebase CLI
         run: npm install -g firebase-tools@14.9.0
 
-      - name: Write service account key to file
-        run: echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BOT_NEBULA }}' > "${{ github.workspace }}/firebase-key.json"
+      # ✅ Add service account JSON
+      - name: Write service account key
+        run: echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BOT_NEBULA }}' > firebase-key.json
 
+      # ✅ Set the Firebase credentials env variable
       - name: Set GOOGLE_APPLICATION_CREDENTIALS
         run: echo "GOOGLE_APPLICATION_CREDENTIALS=${{ github.workspace }}/firebase-key.json" >> $GITHUB_ENV
 
+      # ✅ Deploy to Firebase Hosting
       - name: Deploy to Firebase
-        run: firebase deploy --only hosting --project bot-nebula --debug
+        run: firebase deploy --only hosting --project bot-nebula --non-interactive --debug
