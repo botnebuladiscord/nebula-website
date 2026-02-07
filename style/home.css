@@ -67,7 +67,6 @@ b{
 
 .navigation{
     position: relative;
-    /* float: right;   */
     top: 25px; 
     padding-right: 10px;
     z-index: 4;
@@ -140,6 +139,7 @@ b{
 button{
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 button ion-icon:hover{

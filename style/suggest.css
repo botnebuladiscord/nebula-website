@@ -28,25 +28,20 @@ html{
 
 #title{
     position: inherit;
-    top: 5%;
+    top: calc(min(20vw, 160px)/2);
     left: 50%;
     text-align: center;
-    transform: translate(-50%, 0%);
-    font-size: 2vw;
+    transform: translate(-50%, -50%);
+    font-size: clamp(0.5rem, calc(1.5vw + 1rem), 3rem);
 }
 
-#subtitle{
+#main{
     position: inherit;
     top: 20%;
     left: 0%;
     text-align: center;
     transform: translate(0%, 0%);
     width: 100%;
-}
-
-#subtitle h1{
-    font-weight: 500;
-    font-size: 3vw;
 }
 
 code{
@@ -140,6 +135,7 @@ b{
 button{
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 button ion-icon:hover{
@@ -153,62 +149,3 @@ button ion-icon:hover{
     font-size: 3em;
     z-index: 3;
 }
-
-@media only screen and (max-width: 830px) {
-    #video{
-        height: 196.875px;
-        width: 350px;
-    }
-    #subtitle h1{
-        font-size: 7vw;
-    }
-}
-
-@media only screen and (max-height: 600px) {
-    #video{
-        height: 131.25px;
-        width: 233.33px;
-    }
-}
-
-@media only screen and (max-width: 1091px) {
-    #video{
-        height: 131.25px;
-        width: 233.33px;
-    }
-}
-
-/* @media only screen and (max-width: 500px) {
-    #title{
-        font-size: 5vw;
-    }
-} */
-
-@media only screen and (max-width:700px){
-    .navigation li a{
-        font-size: 2.9vw;
-    }
-    #subtitle{
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width:850px){
-    .navigation li a{
-        font-size: 2vw;
-        padding: 1px;
-    }
-    #subtitle{
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width:920px){
-        .navigation li a{
-            font-size: 2.2vw;
-        }
-        #subtitle{
-            width: 100%;
-        }
-}
-

@@ -28,11 +28,11 @@ html{
 
 #title{
     position: inherit;
-    top: 5%;
+    top: calc(min(20vw, 160px)/2);
     left: 50%;
     text-align: center;
-    transform: translate(-50%, 0%);
-    font-size: 2vw;
+    transform: translate(-50%, -50%);
+    font-size: clamp(0.5rem, calc(1.5vw + 1rem), 3rem);
 }
 
 .navigation{
@@ -109,6 +109,7 @@ html{
 button{
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 button ion-icon:hover{

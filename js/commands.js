@@ -1,9 +1,9 @@
 function search(){
-    var input, text, subtitle, searchlist;
+    var input, text, main, searchlist;
     input = document.getElementById('search');
     text = input.value.toUpperCase();
-    subtitle = document.getElementById('subtitle');
-    searchlist = Array.prototype.slice.call(subtitle.children);
+    main = document.getElementById('main');
+    searchlist = Array.prototype.slice.call(main.children);
     searchlist.shift()
     for (var element of searchlist){
         if (element.children[0].id.toUpperCase().indexOf(text) > -1) {

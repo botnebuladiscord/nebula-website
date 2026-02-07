@@ -28,35 +28,26 @@ html{
 
 #title{
     position: inherit;
-    top: 5%;
+    top: calc(min(20vw, 160px)/2);
     left: 50%;
     text-align: center;
-    transform: translate(-50%, 0%);
-    font-size: 2vw;
+    transform: translate(-50%, -50%);
+    font-size: clamp(0.5rem, calc(1.5vw + 1rem), 3rem);
 }
 
-#subtitle{
-    position: inherit;
-    top: 20%;
+#main{
+    position: absolute;
+    top: 15%;
     left: 0%;
     text-align: center;
-    transform: translate(0%, 0%);
     width: 100%;
-}
-
-#subtitle h1{
-    font-weight: 500;
-    font-size: 3vw;
 }
 
 code{
     background-color: #36393e;
     font-family: AnonymousPro;
     border-radius: 1px;
-    padding-top: 0.2vh;
-    padding-bottom: 0.2vh;
-    padding-left: 1vh;
-    padding-right: 1vh;
+    padding: 5px;
 }
 
 b{
@@ -65,7 +56,6 @@ b{
 
 .navigation{
     position: relative;
-    /* float: right;   */
     top: 25px; 
     padding-right: 10px;
     z-index: 4;
@@ -121,8 +111,6 @@ b{
     top: 0%;
     right: 0%;
     width: 40px;
-    /* height: 40px; */
-    /* float: right; */
 }
 
 .card{
@@ -140,6 +128,7 @@ b{
 button{
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 button ion-icon:hover{
@@ -158,10 +147,7 @@ button ion-icon:hover{
 #cmdtext{
     font-size: 2vw;
     background-color: #17181a;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 1vh;
-    padding-right: 1vh;
+    padding: 10px;
     width: 1%;
     white-space: nowrap;
 }
@@ -181,21 +167,18 @@ button ion-icon:hover{
     height: fit-content;
     position: relative;
     top: 10%;
-    width: 70%;
     left: 0%;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    transform: translate(25%, 0%);
+    padding-left: 30px;
+    padding-right: 30px;
     z-index: 1;
 }
 
 div.command-content{
     background-color: #36393e;
     border-radius: 5px;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 1vh;
-    padding-right: 1vh;
+    padding: 5px;
     text-align: left;
 }
 
@@ -220,69 +203,11 @@ div.command-content:hover{
 #search{
     color: white;
     background-color: #36393e;
-    height: 4vh;
-    width: 30vw;
+    height: auto;
+    width: 40vw;
     border-radius: 15px;
     font-size: 1.5vw;
     border: none;
     padding: 10px;
+    aspect-ratio: 20 / 1;
 }
-
-@media only screen and (max-width: 830px) {
-    #video{
-        height: 196.875px;
-        width: 350px;
-    }
-    #subtitle h1{
-        font-size: 7vw;
-    }
-}
-
-@media only screen and (max-height: 600px) {
-    #video{
-        height: 131.25px;
-        width: 233.33px;
-    }
-}
-
-@media only screen and (max-width: 1091px) {
-    #video{
-        height: 131.25px;
-        width: 233.33px;
-    }
-}
-
-/* @media only screen and (max-width: 500px) {
-    #title{
-        font-size: 5vw;
-    }
-} */
-
-@media only screen and (max-width:700px){
-    .navigation li a{
-        font-size: 2.9vw;
-    }
-    #subtitle{
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width:850px){
-    .navigation li a{
-        font-size: 2vw;
-        padding: 1px;
-    }
-    #subtitle{
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width:920px){
-        .navigation li a{
-            font-size: 2.2vw;
-        }
-        #subtitle{
-            width: 100%;
-        }
-}
-
