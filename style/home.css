@@ -33,7 +33,7 @@ body{
 
 #subtitle{
     position: inherit;
-    top: 30%;
+    top: 35%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -61,7 +61,7 @@ b{
     left: 50%;
     transform: translate(-50%, -50%);
     height: auto;
-    width: min(700px, 100vw);
+    width: min(700px, 90vw);
     aspect-ratio: 16 / 9;
 }
 

@@ -28,55 +28,54 @@ html{
 
 #title{
     position: inherit;
-    top: 5%;
+    top: calc(min(20vw, 160px)/2);
     left: 50%;
     text-align: center;
-    transform: translate(-50%, 0%);
-    font-size: 2vw;
+    transform: translate(-50%, -50%);
+    font-size: clamp(0.5rem, calc(1.5vw + 1rem), 3rem);
 }
 
-#subtitle{
+#main{
     position: absolute;
-    top: 20%;
-    left: 0%;
-    border-radius: 15px;
-    width: 70vw;
-    transform: translate(25%, 0%);
+    top: 15%;
+    padding: min(100px, 5vw);
+}
+
+#main h2{
+    font-size: clamp(1rem, calc(1vw + 1rem), 2rem);;
+}
+
+#main p{
+    font-size: clamp(0.5rem, calc(0.4vw + 1rem), 1.5rem);
+}
+
+#main p b{
+    line-height: 40px;
+}
+
+#main div.email{
+    background-color: #36393e;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .emptydiv{
     padding-top: 50px;
 }
 
-#subtitle p{
+#main ol li{
     color: white;
-    font-size: 3vh;
-    text-align: left;
-    padding-left: 1vw;
-    padding-right: 1vw;
-}
-
-#subtitle h1{
-    color: white;
-    font-size: 6vh;
-    text-align: left;
-    padding-left: 1vw;
-    padding-right: 1vw;
-}
-
-#subtitle ol li{
-    color: white;
-    font-size: 3vh;
+    font-size: clamp(0.5rem, calc(0.4vw + 1rem), 1.5rem);
     display: list-item;
 }
 
-#subtitle ol{
+#main ol{
     padding-left: 10%;
 }
 
-#subtitle ol li ul{
+#main ol li ul{
     color: white;
-    font-size: 3vh;
+    font-size: clamp(0.5rem, calc(0.4vw + 1rem), 1.5rem);
     padding-left: 10%;
     float: left;
     display:list-item;
@@ -86,45 +85,19 @@ html{
 hr{
     border: 1px solid white;
     border-radius: 5px;
-    margin: 1vw;
+    margin: 0vw;
 }
-
-#subtitle p a:link {
-    color: pink;
+  
+#main p a:visited {
+    color: #634BA1;
     background-color: transparent;
     text-decoration: none;
 }
   
-#subtitle p a:visited {
-    color: cyan;
-    background-color: transparent;
-    text-decoration: none;
-}
-  
-#subtitle p a:hover {
-    color: gold;
+#main p a:hover {
+    color: #AE40B9;
     background-color: transparent;
     text-decoration: underline;
-}
-  
-#subtitle p a:active {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-code{
-    background-color: #17181a;
-    font-family: AnonymousPro;
-    border-radius: 1px;
-    padding-top: 0.2vh;
-    padding-bottom: 0.2vh;
-    padding-left: 1vh;
-    padding-right: 1vh;
-}
-
-b{
-    font-weight: 900;
 }
 
 .navigation{
@@ -213,64 +186,5 @@ button ion-icon:hover{
     color: white;
     font-size: 3em;
     z-index: 3;
-}
-
-@media only screen and (max-width: 830px) {
-    #video{
-        height: 196.875px;
-        width: 350px;
-    }
-    #subtitle h1{
-        font-size: 7vw;
-    }
-}
-
-@media only screen and (max-height: 600px) {
-    #video{
-        height: 131.25px;
-        width: 233.33px;
-    }
-}
-
-@media only screen and (max-width: 1091px) {
-    #video{
-        height: 131.25px;
-        width: 233.33px;
-    }
-}
-
-/* @media only screen and (max-width: 500px) {
-    #title{
-        font-size: 5vw;
-    }
-} */
-
-@media only screen and (max-width:700px){
-    .navigation li a{
-        font-size: 2.9vw;
-    }
-    #subtitle{
-        width: 100vw;
-        transform: translate(0%, 0%);
-    }
-    #subtitle p{
-        padding: 0vw;
-    }
-    #subtitle h1{
-        padding: 0vw;
-    }
-}
-
-@media only screen and (max-width:850px){
-    .navigation li a{
-        font-size: 2vw;
-        padding: 1px;
-    }
-}
-
-@media only screen and (max-width:920px){
-        .navigation li a{
-            font-size: 2.2vw;
-        }
 }
 

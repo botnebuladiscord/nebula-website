@@ -26,15 +26,6 @@ html{
     width: min(20vw, 160px);
 }
 
-#title{
-    position: inherit;
-    top: 5%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, 0%);
-    font-size: 2vw;
-}
-
 .navigation{
     position: relative;
     top: 25px; 
@@ -147,7 +138,14 @@ button ion-icon:hover{
 }
 
 #overview p a{
-    line-height: 30px;
+    line-height: 40px;
+    transition: ease-in-out 0.25s;
+    padding: 10px;
+}
+
+#overview p a:hover{
+    background-color: white;
+    color: #17181a;
 }
 
 #links{
@@ -171,4 +169,9 @@ button ion-icon:hover{
     height: 6vh;
     display: flex;
     align-items: center;
+    transition: ease-in-out 0.25s;
+}
+
+#links a:hover{
+    transform: translate(0, -5px);
 }
