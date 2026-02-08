@@ -6,6 +6,18 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "redirects": [
+        {
+            "source": "/dashboard",
+            "destination": "https://nebuladashboard.vercel.app",
+            "type": 301
+        },
+        {
+            "source": "/dashboard/:path*",
+            "destination": "https://nebuladashboard.vercel.app/:path*",
+            "type": 301
+        }
     ]
   }
 }
